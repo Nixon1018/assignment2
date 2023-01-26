@@ -6,7 +6,12 @@ class Shape
 {
     Scanner sc= new Scanner (System.in);
     private static final  Logger LOGGER=Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    double length,a,c,height,base,radius;
+    double length;
+    double a;
+    double c;
+    double height;
+    double base;
+    double radius;
     double width;
     Shape(double l,double w)
     {
@@ -41,7 +46,12 @@ class Shape
     }
     public static void main(String[] args)
     {
-        double l,side1,side2,bas,hei,r;
+        double l;
+        double side1;
+        double side2;
+        double bas;
+        double hei;
+        double r;
         double w;
         Scanner sc = new Scanner(System.in);
         LOGGER.log(Level.INFO,"Enter the choice:");
