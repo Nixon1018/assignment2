@@ -6,7 +6,8 @@ class Shape
 {
     Scanner sc= new Scanner (System.in);
     private static final  Logger LOGGER=Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-    double length,width,a,c,height,base,radius;
+    double length,a,c,height,base,radius;
+    double width;
     Shape(double l,double w)
     {
         length=l;
@@ -26,12 +27,12 @@ class Shape
     void triangle()
     {
         LOGGER.log(Level.INFO,Double.toString((height*base)/2),"Your account balance is :"+(height*base)/2);
-        LOGGER.log(Level.INFO,Double.toString((a+base+c)),"The perimeter of the triangle is"+(double)(a+base+c));
+        LOGGER.log(Level.INFO,Double.toString((a+base+c)),"The perimeter of the triangle is"+(a+base+c));
     }
     void circle()
     {
         LOGGER.log(Level.INFO,Double.toString(((3.14)*radius*radius)),"The area of the circle"+((3.14)*radius*radius));
-        LOGGER.log(Level.INFO,Double.toString((3.14)*2*radius),"The perimeter of the circle is:"+(double)(3.14)*2*radius);
+        LOGGER.log(Level.INFO,Double.toString((3.14)*2*radius),"The perimeter of the circle is:"+(3.14)*2*radius);
     }
     void rectangle()
     {
@@ -40,8 +41,8 @@ class Shape
     }
     public static void main(String[] args)
     {
-        int shapes;
-        double l,w,side1,side2,bas,hei,r;
+        double l,side1,side2,bas,hei,r;
+        double w;
         Scanner sc = new Scanner(System.in);
         LOGGER.log(Level.INFO,"Enter the choice:");
         LOGGER.log(Level.INFO,"1.triangle 2.circle 3.rectangle");
@@ -62,7 +63,7 @@ class Shape
         else if(choice==2)
         {
             LOGGER.log(Level.INFO,"Enter the radius value:");
-            System.out.println("Enter the radius value:");
+            LOGGER.log(Level.INFO,"Enter the radius value:");
             r=sc.nextDouble();
             Shape s= new Shape(r);
             s.circle();
