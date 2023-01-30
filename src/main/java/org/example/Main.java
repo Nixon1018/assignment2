@@ -38,7 +38,7 @@ class Shape
     }
     void circle()
     {
-        String ca="The Area of the circle is"+(((3.14)*radius*radius));
+        String ca="The Area of the circle is"+((3.14)*radius*radius);
         LOGGER.info(ca);
         String cp="The perimeter of the circle is"+((3.14)*2*radius);
         LOGGER.info(cp);
@@ -47,7 +47,7 @@ class Shape
     {
         String ra="The Area of the rectangle is"+(width*length);
         LOGGER.info(ra);
-        String rp="The perimeter of the rectangle is"+((2*(width+length)));
+        String rp="The perimeter of the rectangle is"+(2*(width+length));
         LOGGER.info(rp);
     }
     public static void main(String[] args) {
