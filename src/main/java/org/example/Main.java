@@ -61,7 +61,6 @@ class Shape
         int o=0;
         Scanner sc = new Scanner(System.in);
         while(o==0) {
-            try{
             LOGGER.log(Level.INFO, "Enter the choice:");
             LOGGER.log(Level.INFO, "1.triangle 2.circle 3.rectangle");
             int choice = sc.nextInt();
@@ -93,13 +92,7 @@ class Shape
             } else if (choice == 4) {
                 o = 1;
             }
-        } catch (Exception e)
-            {
-                String ec = ""+e;
-                LOGGER.info(ec);
-                sc.nextLine();
-            }
-    }
+        }
     }
 
 }
