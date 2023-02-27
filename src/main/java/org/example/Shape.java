@@ -4,7 +4,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 class Shape
 {
-    Scanner sc= new Scanner (System.in);
     private static final  Logger LOGGER=Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     double length;
     double a;
@@ -62,7 +61,7 @@ class Shape
         Scanner sc = new Scanner(System.in);
         while(o==0) {
             LOGGER.log(Level.INFO, "Enter the choice:");
-            LOGGER.log(Level.INFO, "1.triangle 2.circle 3.rectangle");
+            LOGGER.log(Level.INFO, "1.triangle 2.circle 3.rectangle 4.quiet");
             int choice = sc.nextInt();
             if (choice == 1) {
                 LOGGER.log(Level.INFO, "Enter the side1 value:");
